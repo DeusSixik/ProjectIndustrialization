@@ -10,3 +10,10 @@ command_history.txt
 options.txt
 usercache.json
 usernamecache.json
+versions/
+libraries/
+assets/
+launcher_profiles.json
+tlauncher_profiles.json
+servers.dat
+servers.dat.bak
