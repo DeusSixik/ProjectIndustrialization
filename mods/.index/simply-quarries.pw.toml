@@ -1,0 +1,17 @@
+filename = 'Simply Quarries-1.2.jar'
+name = '[IU] Simply Quarries'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Simply Quarries-1.2-1.21.1'
+
+[download]
+hash = '863cf4bd291599acc53999d2a6c945906d914d49'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6951495
+project-id = 572662

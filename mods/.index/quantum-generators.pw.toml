@@ -1,0 +1,17 @@
+filename = 'Quantum Generators-1.3.jar'
+name = '[IU] Quantum Generators'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Quantum Generators-1.3-1.21.1'
+
+[download]
+hash = 'e5f7bc58579c9c897dc96a0743eb973fd97705f3'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6951523
+project-id = 572971

@@ -1,0 +1,11 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"tfc:metal/anvil/bronze","components":{"tfc:heat":{}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfc:metal/pickaxe_head/wrought_iron","components":{"tfc:heat":{}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:iron_pickaxe"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:iron_ingot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfc:ore/poor_tetrahedrite","components":{"tfc:heat":{}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfc:metal/ingot/copper","components":{"tfc:heat":{}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfc:metal/copper"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfc:ore/normal_native_copper","components":{"tfc:heat":{}}},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

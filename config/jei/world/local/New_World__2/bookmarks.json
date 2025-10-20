@@ -1,0 +1,5 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"tfc:metal/ingot/wrought_iron","components":{"tfc:heat":{}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"tfc:metal/anvil/bronze","components":{"tfc:heat":{}}},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

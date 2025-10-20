@@ -1,0 +1,17 @@
+filename = 'pneumaticcraft-repressurized-8.2.13+mc1.21.1.jar'
+name = 'PneumaticCraft: Repressurized'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '"PneumaticCraft: Repressurized" 8.2.13 MC-1.21.1'
+
+[download]
+hash = '3183a7f5f6c7a06be9c6146144b2a530a23f20e1'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6817362
+project-id = 281849

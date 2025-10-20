@@ -1,0 +1,12 @@
+coremods/
+crash-reports/
+defaultconfigs/
+downloads/
+logs/
+saves/
+screenshots/
+server-resource-packs/
+command_history.txt
+options.txt
+usercache.json
+usernamecache.json

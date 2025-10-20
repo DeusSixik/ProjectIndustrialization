@@ -1,0 +1,17 @@
+filename = 'createsifter-1.21.1-2.1.6.jar'
+name = 'Create Sifting'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = 'Create: Sifter 2.1.6 for mc1.21.1'
+
+[download]
+hash = '0327d1550d8f806ffd5bb01a86e1138a71d6a182'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6684683
+project-id = 661938

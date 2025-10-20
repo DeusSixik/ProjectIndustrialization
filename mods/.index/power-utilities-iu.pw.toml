@@ -1,0 +1,17 @@
+filename = 'Power Utilities-1.3.jar'
+name = '[IU] Power Utilities '
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = 'Power Utilities-1.3-1.21.1'
+
+[download]
+hash = '1ca0d8661d5c91a44505a70980066c9c8c0a9dd1'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6951503
+project-id = 572640
