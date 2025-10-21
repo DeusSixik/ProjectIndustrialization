@@ -365,8 +365,6 @@ VanillaManager.addShaped(["minecraft:golden_sword"], "57ed4f25-e096-4fae-9591-74
 	[<item:immersiveengineering:stick_treated>]
 ], <item:minecraft:golden_sword>);
 
-// ImmersiveManager.addCokeOven("cocke/titanium_ingot", <item:industrialupgrade:nugget/titanium> * 9, <item:industrialupgrade:itemingots/titanium_ingot>);
-
 VanillaManager.swapFurnaceRecipe([
 	"industrialupgrade:furnace_118",
 	"industrialupgrade:furnace_39",
@@ -374,6 +372,8 @@ VanillaManager.swapFurnaceRecipe([
 ], VanillaSwapFurnaceRecipe.ImmersiveCokeOven);
 
 
-// CreateManager.addMixing("sdm_test", CreateMixing.None, 
-// [<item:industrialupgrade:crafting_elements/crafting_773_element> * 4], 
-// [<item:minecraft:sand>, <item:industrialupgrade:nugget/spinel> * 2, <item:minecraft:gravel> * 2, <item:minecraft:clay_ball> * 2, <item:industrialupgrade:nugget/yttrium>], 200);
+VanillaManager.addShaped(["create:crafting/kinetics/millstone"], "465dcb2a-fd15-476b-8f5c-876874071ae1", [
+	[<item:minecraft:air>, <item:create:shaft>, <item:minecraft:air>], 
+	[<item:minecraft:polished_granite>, <item:minecraft:iron_ingot>, <item:minecraft:polished_granite>], 
+	[<item:minecraft:stone>, <item:minecraft:polished_andesite>, <item:minecraft:stone>]
+], <item:create:millstone>);
