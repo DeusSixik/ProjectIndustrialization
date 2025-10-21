@@ -101,5 +101,50 @@ public class CreateManager {
         <recipetype:createsifter:sifting_type>.removeByName(name);
     }
     #endif
+
+    public static addMixing(recipe_name: string, 
+        outputs as Percentaged<IItemStack>[], input as IIngredientWithAmount[], duration as int = 100): void {
+            CreateManager.addMixing(recipe_name, CreateMixing.None, outputs, input, [] as FluidIngredient[], duration);
+        }
+
+    public static addMixing(recipe_name: string, mixing: CreateMixing = CreateMixing.None, 
+        outputs as Percentaged<IItemStack>[], input as IIngredientWithAmount[], duration as int = 100): void {
+        CreateManager.addMixing(recipe_name, mixing, outputs, input, [] as FluidIngredient[], duration);
+    }
+
+    public static addMixing(recipe_name: string, mixing: CreateMixing = CreateMixing.None, 
+        outputs as Percentaged<IItemStack>[], input as IIngredientWithAmount[], fluidInputs as FluidIngredient[], duration as int = 100): void {
+        val inputsData = new List<IData>();
+        
+        for o in input {
+            for amm in 0 .. o.amount {
+                inputsData.add(o as IData);
+            } 
+        }
+
+        val outpusts = new List<IData>();
+        for o in outputs {
+            val internalItem = o.getData();
+            outpusts.add({
+                "id" : internalItem.registryName as string,
+                "count" : internalItem.amount
+            } as IData);
+        }
+
+        
+        var recipe as IData = {       
+            "type": "create:mixing",
+            "ingredients": new ListData(inputsData),
+            "results": new ListData(outpusts)
+        };
+        <recipetype:create:mixing>.addJsonRecipe(recipe_name, recipe);
+    }
 }
+
+public enum CreateMixing {
+    Heated,
+    SuperHeated,
+    None
+}
+
 #endif

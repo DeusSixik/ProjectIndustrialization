@@ -1,3 +1,6 @@
 [
-  {"version":2}
+  {"version":2},
+  {"ingredient":{"id":"immersiveengineering:grit_sand"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:sand"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:gravel"},"type":"item_stack","bookmarkType":"INGREDIENT"}
 ]

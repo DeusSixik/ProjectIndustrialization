@@ -36,7 +36,7 @@ VanillaManager.addShaped("3e58edcd-e4cf-4d4f-a6bb-fb4565a1c710", [
 ], <item:createsifter:sifter>);
 
 VanillaManager.addShaped("3e58edcd-e4cf-4d4f-a6bb-fb4565a1c711", [
-	[<item:minecraft:stick>, <tag:item:c:strings>, ],
+	[<item:minecraft:stick> * 4, <tag:item:c:strings>, ],
 	[<item:create:cogwheel>, <item:minecraft:mangrove_planks> * 2]
 ], <item:createsifter:sifter>);
 
@@ -199,8 +199,6 @@ VanillaManager.removeRecipe([
 ], VanillaRemoveRecipe.BlastFurnace);
 
 VanillaManager.removeRecipe([
-	"immersiveengineering:crafting/nugget_copper_to_coper_ingot",
-	"create:crafting/materials/copper_ingot",
 	"minecraft:iron_ingot_from_nuggets",
 	"minecraft:gold_ingot_from_nuggets",
 	"immersiveengineering:crafting/hammer",
@@ -245,7 +243,9 @@ VanillaManager.removeRecipe([
 	"immersiveengineering:crafting/plate_constantan_hammering",
 	"immersiveengineering:crafting/plate_aluminum_hammering",
 	"immersiveengineering:crafting/plate_gold_hammering",
-	"immersiveengineering:crafting/cokebrick"
+	"immersiveengineering:crafting/cokebrick",
+	"industrialupgrade:industrialupgrade_2422",
+	"immersiveengineering:crafting/grit_sand"
 ], VanillaRemoveRecipe.CraftingTable);
 
 <tag:item:projectindustrial:multiblocked_tag>.add(<item:industrialupgrade:forge_hammer>);
@@ -259,3 +259,121 @@ VanillaManager.addShaped("2298c3d5-2a93-4c95-97c1-cb2e87f1398d", [
 VanillaManager.addFuelRecipe("zidkiy_brick", 
 <item:minecraft:bedrock>.withJsonComponent(<componenttype:minecraft:custom_name>, "\"Не обозжонный кирпич\""), 
 <item:immersiveengineering:cokebrick>, 0.2f, 450, VanillaSwapFurnaceRecipe.BlastFurnace);
+
+VanillaManager.addShaped(["minecraft:iron_pickaxe"], "e963c365-33e1-4ff3-9519-f30097972f08", [
+	[<item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>], 
+	[<item:minecraft:air>, <item:immersiveengineering:stick_treated>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:immersiveengineering:stick_treated>, <item:minecraft:air>]
+], <item:minecraft:iron_pickaxe>);
+
+VanillaManager.addShapedMirrored(["minecraft:iron_axe"], "8109a174-53fd-4303-b30e-9894337642c2", <constant:minecraft:mirroraxis:horizontal>, [
+	[<item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>], 
+	[<item:immersiveengineering:stick_treated>, <item:minecraft:iron_ingot>], 
+	[ <item:immersiveengineering:stick_treated>, <item:minecraft:air>]
+], <item:minecraft:iron_axe>);
+
+VanillaManager.addShaped(["minecraft:iron_shovel"], "fce0b93a-2a5a-4ac9-8020-af8a44b0166a", [
+	[<item:minecraft:iron_ingot>], 
+	[<item:immersiveengineering:stick_treated>], 
+	[<item:immersiveengineering:stick_treated>]
+], <item:minecraft:iron_shovel>);
+
+VanillaManager.addShapedMirrored(["minecraft:iron_hoe"], "e9f14a42-21ec-4bf9-8935-3ab0073532ad", <constant:minecraft:mirroraxis:horizontal>, [
+	[<item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>], 
+	[<item:immersiveengineering:stick_treated>, <item:minecraft:air>], 
+	[<item:immersiveengineering:stick_treated>, <item:minecraft:air>]
+], <item:minecraft:iron_hoe>);
+
+
+VanillaManager.addShaped(["minecraft:iron_sword"], "0311c850-b9b3-4185-ab3c-d1379333b658", [
+	[<item:minecraft:iron_ingot>], 
+	[<item:minecraft:iron_ingot>], 
+	[<item:immersiveengineering:stick_treated>]
+], <item:minecraft:iron_sword>);
+
+VanillaManager.addShaped(["minecraft:iron_helmet"], "a532b10b-6603-4365-a37e-cf1e77f07dea", [
+	[<tag:item:c:plates/iron>, <tag:item:c:plates/iron>, <tag:item:c:plates/iron>], 
+	[<tag:item:c:plates/iron>, <item:minecraft:air>, <tag:item:c:plates/iron>]
+], <item:minecraft:iron_helmet>);
+
+VanillaManager.addShaped(["minecraft:iron_chestplate"], "9e13bf3a-4930-47e7-a43e-02dab1e07649", [
+	[<tag:item:c:plates/iron>, <item:minecraft:air>, <tag:item:c:plates/iron>], 
+	[<tag:item:c:plates/iron>, <tag:item:c:plates/iron>, <tag:item:c:plates/iron>], 
+	[<tag:item:c:plates/iron>, <tag:item:c:plates/iron>, <tag:item:c:plates/iron>]
+], <item:minecraft:iron_chestplate>);
+
+VanillaManager.addShaped(["minecraft:iron_leggings"], "4421bf6a-08db-47ba-a761-210d4db3ad1e", [
+	[<tag:item:c:plates/iron>, <tag:item:c:plates/iron>, <tag:item:c:plates/iron>], 
+	[<tag:item:c:plates/iron>, <item:minecraft:air>, <tag:item:c:plates/iron>], 
+	[<tag:item:c:plates/iron>, <item:minecraft:air>, <tag:item:c:plates/iron>]
+], <item:minecraft:iron_leggings>);
+
+VanillaManager.addShaped(["minecraft:iron_boots"], "3a19c32d-2e40-4ef0-af9f-9d1835f767ae", [
+	[<tag:item:c:plates/iron>, <item:minecraft:air>, <tag:item:c:plates/iron>], 
+	[<tag:item:c:plates/iron>, <item:minecraft:air>, <tag:item:c:plates/iron>]
+], <item:minecraft:iron_boots>);
+
+VanillaManager.addShaped(["minecraft:golden_helmet"], "ca7f6f95-f17d-4eef-9587-21ca237f2ce3", [
+	[<tag:item:c:plates/gold>, <tag:item:c:plates/gold>, <tag:item:c:plates/gold>], 
+	[<tag:item:c:plates/gold>, <item:minecraft:air>, <tag:item:c:plates/gold>]
+], <item:minecraft:golden_helmet>);
+
+VanillaManager.addShaped(["minecraft:golden_chestplate"], "81803de4-474e-40ef-bc7c-9aaf6926f5aa", [
+	[<tag:item:c:plates/gold>, <item:minecraft:air>, <tag:item:c:plates/gold>], 
+	[<tag:item:c:plates/gold>, <tag:item:c:plates/gold>, <tag:item:c:plates/gold>], 
+	[<tag:item:c:plates/gold>, <tag:item:c:plates/gold>, <tag:item:c:plates/gold>]
+], <item:minecraft:golden_chestplate>);
+
+VanillaManager.addShaped(["minecraft:golden_leggings"], "2a98fe70-469b-4a06-8414-36155616077b", [
+	[<tag:item:c:plates/gold>, <tag:item:c:plates/gold>, <tag:item:c:plates/gold>], 
+	[<tag:item:c:plates/gold>, <item:minecraft:air>, <tag:item:c:plates/gold>], 
+	[<tag:item:c:plates/gold>, <item:minecraft:air>, <tag:item:c:plates/gold>]
+], <item:minecraft:golden_leggings>);
+
+VanillaManager.addShaped(["minecraft:golden_boots"], "07b59411-c829-478a-be23-a065f378d9cf", [
+	[<tag:item:c:plates/gold>, <item:minecraft:air>, <tag:item:c:plates/gold>], 
+	[<tag:item:c:plates/gold>, <item:minecraft:air>, <tag:item:c:plates/gold>]
+], <item:minecraft:golden_boots>);
+
+VanillaManager.addShapedMirrored(["minecraft:golden_axe"], "efd2ca42-6cf7-4a3f-9b75-136ea6b49ac3", <constant:minecraft:mirroraxis:horizontal>, [
+	[<item:minecraft:gold_ingot>, <item:minecraft:gold_ingot>], 
+	[<item:immersiveengineering:stick_treated>, <item:minecraft:gold_ingot>], 
+	[<item:immersiveengineering:stick_treated>, <item:minecraft:air>]
+], <item:minecraft:golden_axe>);
+
+VanillaManager.addShaped(["minecraft:golden_pickaxe"], "6a193afc-177c-405a-b9da-8e63cee7eb2a", [
+	[<item:minecraft:gold_ingot>, <item:minecraft:gold_ingot>, <item:minecraft:gold_ingot>], 
+	[<item:minecraft:air>, <item:immersiveengineering:stick_treated>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:immersiveengineering:stick_treated>, <item:minecraft:air>]
+], <item:minecraft:golden_pickaxe>);
+
+VanillaManager.addShaped(["minecraft:golden_shovel"], "21c32c6d-e373-417b-b1db-1497d503a234", [
+	[<item:minecraft:gold_ingot>], 
+	[<item:immersiveengineering:stick_treated>], 
+	[<item:immersiveengineering:stick_treated>]
+], <item:minecraft:golden_shovel>);
+
+VanillaManager.addShapedMirrored(["minecraft:golden_hoe"], "3271b3f4-75f7-46e2-a16f-2f10e5523d43", <constant:minecraft:mirroraxis:horizontal>, [
+	[<item:minecraft:gold_ingot>, <item:minecraft:gold_ingot>], 
+	[<item:immersiveengineering:stick_treated>, <item:minecraft:air>], 
+	[<item:immersiveengineering:stick_treated>, <item:minecraft:air>]
+], <item:minecraft:golden_hoe>);
+
+VanillaManager.addShaped(["minecraft:golden_sword"], "57ed4f25-e096-4fae-9591-742c3929ab5a", [
+	[<item:minecraft:gold_ingot>], 
+	[<item:minecraft:gold_ingot>], 
+	[<item:immersiveengineering:stick_treated>]
+], <item:minecraft:golden_sword>);
+
+// ImmersiveManager.addCokeOven("cocke/titanium_ingot", <item:industrialupgrade:nugget/titanium> * 9, <item:industrialupgrade:itemingots/titanium_ingot>);
+
+VanillaManager.swapFurnaceRecipe([
+	"industrialupgrade:furnace_118",
+	"industrialupgrade:furnace_39",
+	"industrialupgrade:furnace_99"
+], VanillaSwapFurnaceRecipe.ImmersiveCokeOven);
+
+
+// CreateManager.addMixing("sdm_test", CreateMixing.None, 
+// [<item:industrialupgrade:crafting_elements/crafting_773_element> * 4], 
+// [<item:minecraft:sand>, <item:industrialupgrade:nugget/spinel> * 2, <item:minecraft:gravel> * 2, <item:minecraft:clay_ball> * 2, <item:industrialupgrade:nugget/yttrium>], 200);

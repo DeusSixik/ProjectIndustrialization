@@ -62,7 +62,7 @@ public class VanillaManager {
         VanillaManager.addFurnace(recipe_name, output, input, xp, cookTime);
     }
 
-    public static addFurnace(recipe_name: string, input: IIngredient, output: IItemStack, xp: float = 0.2f, cookTime: int = 100): void {
+    public static addFurnace(recipe_name: string, input: IIngredient, output: IItemStack, xp: float = 0.2f, cookTime: int = 200): void {
         furnace.addRecipe(recipe_name, output, input, xp, cookTime);
     }
     
@@ -75,13 +75,18 @@ public class VanillaManager {
 
             switch(swap) {
                 case BlastFurnace: {
-                    blastFurnace.addRecipe(recipeHolder.id.path + "_" + i as string, recipe.resultItem, recipe.ingredients[0], 0.2f, 100);
+                    blastFurnace.addRecipe(recipeHolder.id.path + "_" + i as string, recipe.resultItem, recipe.ingredients[0], 0.2f, 200);
+                    break;
+                }
+                case ImmersiveCokeOven: {
+                    ImmersiveManager.addCokeOven(recipeHolder.id.path + "_" + i as string, recipe.ingredients[0], recipe.resultItem);
                     break;
                 }
                 default:
                     break;
             } 
             i++;
+            furnace.removeByName(recipe_name);
         }
     }
 
@@ -108,7 +113,7 @@ public class VanillaManager {
     }
 
     public static addFuelRecipe(recipe_name: string, input: IIngredient, output: IItemStack, type: VanillaSwapFurnaceRecipe = VanillaSwapFurnaceRecipe.Furnace): void {
-        VanillaManager.addFuelRecipe(recipe_name, input, output, 0.2f, 100,  type);
+        VanillaManager.addFuelRecipe(recipe_name, input, output, 0.2f, 200,  type);
     }
 
     public static addFuelRecipe(recipe_name: string, input: IIngredient, output: IItemStack, xp: float, cookTime: int, type: VanillaSwapFurnaceRecipe = VanillaSwapFurnaceRecipe.Furnace): void {
@@ -135,5 +140,6 @@ public enum VanillaRemoveRecipe {
 
 public enum VanillaSwapFurnaceRecipe {
     BlastFurnace,
-    Furnace
+    Furnace,
+    ImmersiveCokeOven
 }
