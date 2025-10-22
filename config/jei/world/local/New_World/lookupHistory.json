@@ -1,5 +1,6 @@
 [
   {"version":1},
+  {"ingredient":{"id":"createsifter:sifter"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"powah:crystal_niotic"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"powah:capacitor_niotic"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"powah:energizing_rod_blazing"},"type":"item_stack","bookmarkType":"INGREDIENT"},
@@ -60,7 +61,6 @@
   {"ingredient":{"id":"createsifter:crushed_end_stone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"createsifter:advanced_sturdy_mesh"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"createsifter:advanced_custom_mesh"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"createsifter:sifter"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"minecraft:diamond"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"create:encased_fan","components":{"minecraft:custom_name":"{\"italic\":false,\"translate\":\"create.recipe.fan_blasting.fan\"}"}},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"minecraft:gold_nugget"},"type":"item_stack","bookmarkType":"INGREDIENT"},

@@ -1,0 +1,29 @@
+{
+  "type": "createsifter:sifting",
+  "input": {
+    "item": "minecraft:gravel"
+  },
+  "mesh": {
+    "count": 1,
+    "id": "createsifter:string_mesh"
+  },
+  "processingTime": 500,
+  "results": [
+    {
+      "id": "create:copper_nugget",
+      "chance": 0.1
+    },
+    {
+      "id": "minecraft:iron_nugget",
+      "chance": 0.13
+    },
+    {
+      "id": "minecraft:coal",
+      "chance": 0.03
+    },
+    {
+      "id": "minecraft:flint",
+      "chance": 0.166
+    }
+  ]
+}
