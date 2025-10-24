@@ -22,7 +22,6 @@ import crafttweaker.api.util.random.Percentaged;
 
 public class CreateManager {
 
-
     public static addItemApplication(name: string, input:  IIngredient[], itemOut as IItemStack) as void{
         val inputsData = new List<IData>();
         for o in input {
@@ -38,10 +37,6 @@ public class CreateManager {
         <recipetype:create:item_application>.addJsonRecipe(name, recipe);
     }
     
-    // public static filling(name: string, output as Percentaged<IItemStack>, inputContainer as IIngredient, inputFluid as FluidIngredient) as void{
-    //     <recipetype:create:filling>.addRecipe(name, output, inputContainer, inputFluid, 200);
-    // }
-
     #onlyIf modloaded createsifter
     public static sifting(name: string, input: IIngredient[], out: Percentaged<IItemStack>[], processingTime: int = 500, waterlogged: bool = false): void {
         val inputsData = new List<IData>();
@@ -68,17 +63,13 @@ public class CreateManager {
     public static siftingNew(name: string, input as IItemStack, mesh as IItemStack, out: Percentaged<IItemStack>[], processingTime: int = 500, waterlogged: bool = false): void {
         val outpusts = new List<IData>();
 
-
         for o in out {
             val internalItem = o.getData();
-
-
             outpusts.add({
                 "id" : internalItem.registryName as string,
                 "chance" : o.getPercentage(),
                 "count" : internalItem.amount
             } as IData);
-            // outpusts.add((internalItem as IData).merge({"count" : internalItem.amount}).merge({"chance": o.getPercentage()}));
         }
 
         val recipe: IData = {
@@ -97,9 +88,8 @@ public class CreateManager {
         <recipetype:createsifter:sifting_type>.addJsonRecipe(name, recipe);
     }
 
-    public static siftingRemove(name: string[]): void {
-        <recipetype:createsifter:sifting_type>.removeByName(name);
-    }
+    public static siftingRemove(name: string[]): void => 
+        CreateManager.removeRecipe(name, CreateManager_Recipe.Sifting);
     #endif
 
     public static addMixing(recipe_name: string, 
@@ -139,12 +129,38 @@ public class CreateManager {
         };
         <recipetype:create:mixing>.addJsonRecipe(recipe_name, recipe);
     }
+
+    public static removeRecipe(recipe_names: string[], type: CreateManager_Recipe): void {
+        switch(type) {
+            case Mixing: {
+                <recipetype:create:mixing>.removeByName(recipe_names);
+                break;
+            }
+            case Sifting: {
+                <recipetype:createsifter:sifting_type>.removeByName(recipe_names);
+                break;
+            }
+            case Crushing: {
+                <recipetype:create:crushing>.removeByName(recipe_names);
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    }
 }
 
 public enum CreateMixing {
     Heated,
     SuperHeated,
     None
+}
+
+public enum CreateManager_Recipe {
+    Mixing,
+    Sifting,
+    Crushing
 }
 
 #endif

@@ -22,6 +22,22 @@ import crafttweaker.api.util.random.Percentaged;
 
 public class ImmersiveManager {
 
+    public static removeRecipe(recipe_names: string[], type: ImmersiveManager_Recipes): void {
+        switch(type) {
+            case CokeOven: {
+                <recipetype:immersiveengineering:coke_oven>.removeByName(recipe_names);
+                break;
+            }
+            case Alloy: {
+                <recipetype:immersiveengineering:alloy>.removeByName(recipe_names);
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    }
+
     public static addCokeOven(recipe_name: string, input: IItemStack, out: IItemStack, creosote: int = 1, time: int = 1500): void {
     
         val recipe as IData = {
@@ -41,6 +57,11 @@ public class ImmersiveManager {
         
         <recipetype:immersiveengineering:coke_oven>.addJsonRecipe(recipe_name, recipe);
     }
+}
+
+public enum ImmersiveManager_Recipes {
+    CokeOven,
+    Alloy;
 }
 
 // #endif
