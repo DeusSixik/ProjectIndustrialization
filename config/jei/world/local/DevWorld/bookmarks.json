@@ -1,8 +1,23 @@
 [
   {"version":2},
-  {"recipe":["createsifter:andesite_mesh_gravel_merged",{"input":{"item":"minecraft:gravel"},"results":[{"id":"create:copper_nugget","chance":0.3},{"id":"create:zinc_nugget","chance":0.4},{"id":"minecraft:iron_nugget","chance":0.4},{"id":"minecraft:gold_nugget","chance":0.2},{"id":"minecraft:coal","chance":0.1},{"id":"minecraft:flint","chance":0.5}],"mesh":{"id":"createsifter:andesite_mesh","count":1},"processingTime":500,"type":"createsifter:sifting"}],"recipeType":"createsifter:sifting","bookmarkType":"RECIPE"},
-  {"ingredient":{"id":"create:copper_nugget"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:iron_nugget"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:coal"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:flint"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+  {"ingredient":{"id":"create:crushed_raw_uranium"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:powdered_obsidian"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"ae2:fluix_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"ae2:certus_quartz_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:itemingots/manganese_ingot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:iron_ingot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:itemingots/magnesium_ingot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:crafting_elements/crafting_771_element"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"immersiveengineering:wire_copper"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:wheat"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:crafting_elements/crafting_11_element"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:blockresource/machine"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:steam_boiler/steam_boiler_controller"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:steam_boiler/steam_boiler_tank"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:steam_boiler/steam_boiler_heater"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:steam_boiler/steam_boiler_heat_exchanger"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:steam_boiler/steam_boiler_casing"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:basemachine3/generator_iu"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"industrialupgrade:crafting_elements/crafting_493_element"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"pneumaticcraft:heat_pipe"},"type":"item_stack","bookmarkType":"INGREDIENT"}
 ]

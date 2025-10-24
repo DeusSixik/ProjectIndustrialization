@@ -1,6 +1,11 @@
 import crafttweaker.api.tag.type.KnownTag;
 import crafttweaker.api.tag.MCTag;
 import crafttweaker.api.ingredient.IIngredient;
+import crafttweaker.api.recipe.IRecipeManager;
+import crafttweaker.api.recipe.RecipeHolder;
+import crafttweaker.api.resource.ResourceLocation;
+import crafttweaker.api.recipe.type.Recipe;
+
 
 
 //Stage One
@@ -108,7 +113,7 @@ VanillaManager.addShaped(["minecraft:stone_shovel"], "bfca9515-3ad7-416d-a59e-64
 VanillaManager.addShaped("26697a4c-8961-4dd1-bff6-603d16f34d03", [
 	[<tag:item:c:strings> as IIngredient, <item:createsifter:stone_pebble>, <tag:item:c:strings> as IIngredient], 
 	[<item:minecraft:air>, <tag:item:c:rods/wooden> as IIngredient, <item:minecraft:air>], 
-	[<tag:item:c:rods/wooden> as IIngredient, <item:minecraft:air>, <item:minecraft:air>]
+	[<item:minecraft:air>, <tag:item:c:rods/wooden> as IIngredient, <item:minecraft:air>]
 ], <item:minecraft:stone_shovel>);
 
 VanillaManager.addShaped(["minecraft:stone_hoe"], "01ac3c51-b57b-49b1-b249-c81f3c7f3151", [
@@ -245,7 +250,9 @@ VanillaManager.removeRecipe([
 	"immersiveengineering:crafting/plate_gold_hammering",
 	"immersiveengineering:crafting/cokebrick",
 	"industrialupgrade:industrialupgrade_2422",
-	"immersiveengineering:crafting/grit_sand"
+	"immersiveengineering:crafting/grit_sand",
+	"immersiveengineering:crafting/alloybrick",
+	"immersiveengineering:crafting/alloybrick_from_slab",
 ], VanillaRemoveRecipe.CraftingTable);
 
 <tag:item:projectindustrial:multiblocked_tag>.add(<item:industrialupgrade:forge_hammer>);
@@ -377,3 +384,44 @@ VanillaManager.addShaped(["create:crafting/kinetics/millstone"], "465dcb2a-fd15-
 	[<item:minecraft:polished_granite>, <item:minecraft:iron_ingot>, <item:minecraft:polished_granite>], 
 	[<item:minecraft:stone>, <item:minecraft:polished_andesite>, <item:minecraft:stone>]
 ], <item:create:millstone>);
+
+VanillaManager.addShaped(["create:crafting/kinetics/belt_connector"], "528115be-6c4c-4c58-b938-ac6041675fae", [
+	[<item:minecraft:dried_kelp>, <item:minecraft:dried_kelp>, <item:minecraft:dried_kelp>], 
+	[<item:minecraft:leather>, <item:minecraft:string>, <item:minecraft:leather>], 
+	[<item:minecraft:dried_kelp>, <item:minecraft:dried_kelp>, <item:minecraft:dried_kelp>]
+], <item:create:belt_connector> * 2);
+
+
+IndustrialUpgrade.addSmelter("test_smelter_recipe", IndustrialUpgrade_SmelterType.Furnace,  
+	[InputParam.of(<item:minecraft:golden_apple>)],
+	[InputParam.of(<fluid:minecraft:lava> * 256)]
+);
+
+ImmersiveManager.removeRecipe([
+	"immersiveengineering:alloysmelter/invar",
+	"immersiveengineering:alloysmelter/electrum",
+	"immersiveengineering:alloysmelter/bronze",
+	"immersiveengineering:alloysmelter/insulating_glass",
+	"immersiveengineering:alloysmelter/brass",
+	"immersiveengineering:alloysmelter/constantan"
+	], ImmersiveManager_Recipes.Alloy);
+
+VanillaManager.addShaped(["create:crafting/kinetics/mechanical_drill"], "5df33177-f37e-40cc-8bf3-b513d50489a2", [
+	[<item:minecraft:air>, <item:create:andesite_alloy>, <item:minecraft:air>], 
+	[<item:create:andesite_alloy>, <item:industrialupgrade:crafting_elements/crafting_508_element>, <item:create:andesite_alloy>], 
+	[<item:minecraft:air>, <item:create:andesite_casing>, <item:minecraft:air>]
+], <item:create:mechanical_drill>);
+
+CreateManager.removeRecipe([
+	"create:crushing/deepslate_emerald_ore",
+	"create:crushing/emerald_ore",
+	"create:crushing/deepslate_diamond_ore",
+	"create:crushing/diamond_horse_armor",
+	"create:crushing/diamond_ore",
+	"create:crushing/raw_uranium",
+	"create:crushing/raw_uranium_block",
+	"create:crushing/uranium_ore",
+	"create:crushing/obsidian",
+	"create:milling/compat/ae2/fluix_crystal",
+	"create:milling/compat/ae2/certus_quartz"
+], CreateManager_Recipe.Crushing);
